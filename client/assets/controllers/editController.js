@@ -11,8 +11,9 @@ app.controller('editController', ['$scope', 'friendFactory', '$routeParams', '$l
             $location.url('/');
         });
     }
-
+    // Fetch Friend from database
     friendFactory.show(params.id, function(data) {
+        data.dob = new Date(data.dob);
         $scope.friend = data;
     });
 }]);

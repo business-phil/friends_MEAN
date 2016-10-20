@@ -1,4 +1,4 @@
-app.controller('showController', ['$scope', 'friendFactory', '$routeParams', function($scope, friendFactory, params, $location) {
+app.controller('showController', ['$scope', 'friendFactory', '$routeParams', '$location', function($scope, friendFactory, params, $location) {
     $scope.friend = {};
 
     $scope.delete = function(id) {
